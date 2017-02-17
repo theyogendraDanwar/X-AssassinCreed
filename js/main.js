@@ -27,16 +27,16 @@ $(document).ready(function() {
         //Calling Event When Scrolling the page
 
         // console.log($('.scene-2').position().top);
-        if ($(window).scrollTop() >= $('.scene-2').position().top + 35) {
+        if ($(window).scrollTop() >= $('.scene-2').position().top + 45) {
             $(".div1").fadeIn(600); //reached the desired point -- show div
         }
-        if ($(window).scrollTop() >= $('.scene-3').position().top + 35) {
+        if ($(window).scrollTop() >= $('.scene-3').position().top + 45) {
             $(".div2").fadeIn(600); //reached the desired point -- show div
         }
-        if ($(window).scrollTop() >= $('.scene-4').position().top + 35) {
+        if ($(window).scrollTop() >= $('.scene-4').position().top + 45) {
             $(".div3").fadeIn(600); //reached the desired point -- show div
         }
-        if ($(window).scrollTop() >= $('.scene-5').position().top + 35) {
+        if ($(window).scrollTop() >= $('.scene-5').position().top + 45) {
             $(".div4").fadeIn(600); //reached the desired point --show div
         }
 
