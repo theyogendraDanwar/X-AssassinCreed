@@ -1,0 +1,225 @@
+    @import '_customFont';
+    $tab:786px;
+    * {
+        box-sizing: "border-box";
+        ::after {
+            box-sizing: "border-box";
+        }
+        ::before {
+            box-sizing: "border-box";
+        }
+    }
+    
+    code {
+        color: rgb(61, 60, 123);
+        background-color: rgb(248, 251, 253);
+    }
+    
+    %paral-image-attr {
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
+    
+    body,
+    html {
+        margin: 0 auto;
+        padding: 0;
+        height: 100%;
+        background: #050302;
+        -webkit-font-smoothing: antialiased;
+        ::selection {
+            background: #333;
+            color: #fff;
+        }
+    }
+    
+    #intro {
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        .cross-button {
+            top: 0px;
+            padding: 10px;
+            color: #FA3F3F;
+            font-size: 30px;
+            z-index: 10;
+            right: 0px;
+            position: absolute;
+            cursor: pointer;
+            background: transparent;
+            :hover {
+                color: #E2E2E2;
+            }
+        }
+        .video-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            overflow: hidden;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            #intro-video {
+                min-height: inherit;
+                width: 100%;
+                height: 100%;
+                left: auto;
+                transform: none;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .navbar {
+        background: transparent;
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+    
+    main[role="main-content"] {
+        z-index: 0;
+        background: black;
+        max-width: 1920px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    
+    .full-page-wrapper {
+        margin: 0 auto;
+        display: block;
+        height: 100%;
+        position: relative;
+        .scene-1 {
+            @extend %paral-image-attr;
+            border-radius: 4px;
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            background-image: url('../../dist/images/section-1.jpg');
+            .layer {
+                background-image: url('../../dist/images/vignette-darker-lg.png');
+                position: relative;
+                height: 100%;
+                padding: 20px;
+            }
+        }
+        @for $i from 2 through 5 {
+            .scene-#{$i} {
+                @extend %paral-image-attr;
+                border-radius: 4px;
+                .layer {
+                    background-image: url('../../dist/images/vignette-darker-lg.png');
+                    position: relative;
+                    padding: 20px;
+                    height: 100%;
+                }
+                b {
+                    font-size: 70px;
+                    font-family: 'Gabrielle';
+                    color: #fdf4f4;
+                    @media screen and (max-width: $tab) {
+                        font-size: 40px;
+                    }
+                }
+                .col-lg-3,
+                .col-md-3,
+                .col-sm-12,
+                .col-xs-12 {
+                    p {
+                        color: #fff;
+                        font-size: 30px;
+                        font-family: 'goudy-old-style';
+                        @media screen and (max-width: $tab) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        @for $i from 2 through 5 {
+            .scene-#{$i} {
+                background-image: url('../../dist/images/section-#{$i}.jpg');
+            }
+        }
+        .section-1 {
+            z-index: 0;
+            position: fixed;
+            padding: 0;
+            // position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            top: 30%;
+            .content {
+                font-weight: bold;
+                color: white;
+                font-family: "Anson-Regular";
+                margin: 0 auto;
+                font-size: 90px;
+                @media screen and (max-width: 500px) {
+                    font-size: 60px;
+                }
+            }
+            .caption-text {
+                font-size: 26px;
+                color: #d6d0d4;
+                @media screen and (max-width: 500px) {
+                    font-size: 20px;
+                }
+            }
+        }
+        .section-2,
+        .section-4 {
+            top: 0px;
+            position: absolute;
+            right: 200px;
+            @media screen and (max-width: $tab) {
+                position: relative !important;
+                right: initial !important;
+                text-align: center !important;
+            }
+            img {
+                @media screen and (max-width: $tab) {
+                    height: 300px !important;
+                    width: 180px !important;
+                }
+            }
+        }
+        .section-3,
+        .section-finale {
+            top: 0px;
+            position: absolute;
+            left: 200px;
+            @media screen and (max-width: $tab) {
+                position: relative !important;
+                left: initial !important;
+                text-align: center !important;
+            }
+            img {
+                @media screen and (max-width: $tab) {
+                    height: 300px !important;
+                    width: 180px !important;
+                }
+            }
+        }
+    }
+    
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #b6a9a9;
+        line-height: 60px;
+        background-color: #080907;
+    }
