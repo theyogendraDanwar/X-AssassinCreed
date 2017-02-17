@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     var movementStrength = 10;
 
     //Hiding Div's
@@ -54,6 +54,11 @@ $(document).ready(function() {
     //Before navigating scroll to top
     $(window).on('beforeunload', function() {
         $(window).scrollTop(0);
+    });
+
+    $("#intro-video").bind("ended", function() {
+        // console.log("video has ended");
+        $('#intro').fadeOut(400);
     });
 
 });
