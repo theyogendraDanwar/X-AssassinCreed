@@ -1,5 +1,8 @@
-    @import '_customFont';
+    @import 'customFont';
     $tab:786px;
+    $mobile:500px;
+    $desktop:1024px;
+    
     * {
         box-sizing: "border-box";
         ::after {
@@ -18,7 +21,7 @@
     %paral-image-attr {
         position: relative;
         background-attachment: fixed;
-        background-position: center;
+        background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -140,8 +143,8 @@
                         color: #fff;
                         font-size: 30px;
                         font-family: 'goudy-old-style';
-                        @media screen and (max-width: $tab) {
-                            font-size: 20px;
+                        @media screen and (max-width: $mobile) {
+                            font-size: 25px;
                         }
                     }
                 }
@@ -167,14 +170,14 @@
                 font-family: "Anson-Regular";
                 margin: 0 auto;
                 font-size: 90px;
-                @media screen and (max-width: 500px) {
+                @media screen and (max-width: $mobile) {
                     font-size: 60px;
                 }
             }
             .caption-text {
                 font-size: 26px;
                 color: #d6d0d4;
-                @media screen and (max-width: 500px) {
+                @media screen and (max-width: $mobile) {
                     font-size: 20px;
                 }
             }
@@ -184,15 +187,22 @@
             top: 0px;
             position: absolute;
             right: 200px;
-            @media screen and (max-width: $tab) {
+            @media screen and (max-width: $desktop) {
+                right: 60px;
+            }
+            @media screen and (max-width: 992px) {
                 position: relative !important;
                 right: initial !important;
                 text-align: center !important;
             }
             img {
                 @media screen and (max-width: $tab) {
+                    height: 400px !important;
+                    width: 220px !important;
+                }
+                @media screen and (max-width: $mobile) {
                     height: 300px !important;
-                    width: 180px !important;
+                    width: 172px !important;
                 }
             }
         }

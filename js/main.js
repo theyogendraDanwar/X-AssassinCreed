@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    //Adding Axception For the Mobile Mode
+    $('#intro-video')[0].play();
+
     var movementStrength = 10;
 
     //Hiding Div's
