@@ -1,24 +1,9 @@
 $(document).ready(function() {
 
     //Adding Axception For the Mobile Mode
-    // $('#intro-video')[0].play();
+    $('#intro-video')[0].play();
 
     var movementStrength = 10;
-    
-    var ONLYONETIME_EXECUTE = null;
-window.addEventListener('load', function(){ // on page load
- 
-    document.body.addEventListener('touchstart', function(e){
-    
-  if (ONLYONETIME_EXECUTE == null) {   
-        video.play();
-        ONLYONETIME_EXECUTE = 0;
-        }
-
-    }, false)
- 
-}, false)
-
 
 // It is very usually that user touch screen  ...
 
